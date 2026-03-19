@@ -1,0 +1,16 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build',
+    '-t', 'us-central1-docker.pkg.dev/<PROJECT_ID>/beam-images/nwm-transformation-img:v1',
+    '-f', 'container/Dockerfile',
+    '.'
+  ]
+
+images:
+  - 'us-central1-docker.pkg.dev/<PROJECT_ID>/beam-images/nwm-transformation-img:v1'
+
+serviceAccount: "projects/<PROJECT_ID>/serviceAccounts/sa-cloudbuild@<PROJECT_ID>.iam.gserviceaccount.com"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
