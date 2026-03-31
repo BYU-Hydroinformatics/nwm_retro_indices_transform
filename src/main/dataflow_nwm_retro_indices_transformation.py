@@ -363,7 +363,7 @@ BIGQUERY_INDICES_SCHEMA = {
 
 PROJECT_ID = '<PROJECT_ID>'
 REGION = 'us-central1'
-JOB_IDENTIFIER = 'nwm-transform-job-2600000-rest'
+JOB_IDENTIFIER = '<JOB_IDENTIFIER>'
 TEMP_LOCATION = 'gs://nwm-retro-temp'
 VPC_NETWORK = 'base-network'
 VPC_SUBNET = 'base-network'

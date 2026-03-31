@@ -27,4 +27,24 @@ This repository contains code for the Google Cloud-based transformation of Natio
 4. Vertex AI Notebook Instance
 5. IAM Service Accounts
 
-### Run the transform job
+### Run the transformation job
+1. Find the notebook workbench instance `dataflow-launcher-notebook` from `Vertex AI > Workbench` and open it by clicking on 'Open JupyterLab'.
+2. In the notebook, upload the src folder from the repository.
+3. Create a CONDA environemnt `dataflow_job_env`:
+`conda create --name dataflow_job_env python=3.12.12`
+4. Activate the environment and install the required packages:
+```
+conda activate dataflow_job_env \
+cd src \
+pip install pip install -r requirements.txt
+```
+5. Open the `dataflow_nwm_retro_indices_transformation.py` file. Insert a `<PROJECT_ID>`, select a mode of run through the constant `SELECTION_MODE` as 'slice' or 'reach_list'. Choose a slice range instead of `slice(2600000,None)` or change the `LIST_OF_REACHES` with preferred reach identifiers. 
+6. Run the transformation job
+```
+cd main \
+python dataflow_nwm_retro_indices_transformation.py
+```
+7. Monitor the Dataflow job through the terminal log or from the console (`Dataflow > Jobs > <JOB_IDENTIFIER>`) until and even after finished.
+
+8. Check the transformed data in the BigQuery tables.
+
