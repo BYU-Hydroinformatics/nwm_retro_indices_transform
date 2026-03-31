@@ -1,0 +1,15 @@
+apache-beam[gcp]==2.65.0
+xarray==2024.5.0
+zarr==2.18.1
+s3fs==2024.5.0
+gcsfs==2024.5.0
+pyarrow==16.0.0
+numpy==1.26.4
+dask==2024.5.0
+xarray-beam==0.9.2
+pandas==2.2.2
+numcodecs==0.15.1
+scipy==1.11.2
+baseflow==0.1.0
+# For testing
+pytest==9.0.2
