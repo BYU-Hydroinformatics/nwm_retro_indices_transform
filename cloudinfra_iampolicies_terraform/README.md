@@ -1,4 +1,4 @@
-# Implementation Steps
+### Implementation Steps
 1. Open the Cloud Shell Editor and upload the "cloudinfra_iampolicies_terraform" folder by dragging the folder and dropping it on the File Explorer pane.
 2. Replace the placeholder values (inside <>) with actual values of project id and number, developer email, etc. in 'container/cloudbuild.yaml' and 'terraform.tfvars'.
 2. Open the Cloud Shell terminal and change the directory to the "cloud_infra_terraform" folder.
@@ -16,7 +16,7 @@
     terraform apply
     ```
 
-# Terraform Structure
+#### Terraform Structure
 ```
 cloud_infra_terraform/
 ├── container/
@@ -44,7 +44,7 @@ cloud_infra_terraform/
 └── README.md
 ```
 
-# Resources Created
+#### Resources Created
 1. Artifact Registry Repository
 2. BigQuery Dataset
 3. Google Cloud Storage Buckets
